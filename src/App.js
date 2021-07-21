@@ -14,26 +14,21 @@ function App() {
   const { loading, error, data } = useFetch(uri, 32);
 
   const handleHover = (e) => {
-    console.log(e)
     setUrlAvatar(e.target.src);
-    setName(e.target.alt)
+    setName(e.target.alt);
   }
 
   if(loading) return <p>Loading...</p>
 
-  console.log(data)
-
   return (
     <div className="container">
         <div className="element-container">
-        
-
             <div className="grid-items">
               {
                 data.map((e) => {
                   return(
                     <div className="item"  >  
-                      <img alt={ e.name }  onMouseEnter={handleHover} src={ e.image.url } />
+                      <img alt={ e.name }  onMouseEnter={handleHover} src={ e.image.url } /> 
                     </div>
                   )
                 })

@@ -5,7 +5,7 @@ const Item = ({ img }) => {
 
     return (
         <>
-            <img src={ img } alt="" />
+            <img src={ img } />
         </>
     )
 }
