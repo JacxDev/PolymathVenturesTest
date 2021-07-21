@@ -1,10 +1,10 @@
 import React from 'react';
 import './item.css'
 
-const Item = () => {
+const Item = ({ img }) => {
     return (
         <div className="item"> 
-            Element 1
+            <img src={ img } alt="" />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 .container{
-  background-color: indigo;
+  background-color: rgb(59, 59, 59);
   height: 100vh;
   display: grid;
   grid-template-columns: 90%;
@@ -8,23 +8,22 @@
 
 
 .element-container{
-  background-color: khaki;
+  background-color: rgb(59, 59, 59);
   height: 90%;
   align-self: center;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 40rem) , 1fr));
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(100px, auto);
   justify-content: center;
 }
 
 .avatar-container{
-  background-color:royalblue;
+  background-color:rgb(59, 59, 59);
 }
 
 .grid-items{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr) );
-  grid-template-rows: minmax(50px, 100px);
-  gap: 15px;
-  justify-content: center;
+  grid-template-rows: repeat(auto-fill, minmax(80px, 100px));
+  gap: 20px;
 }
