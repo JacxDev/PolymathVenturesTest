@@ -1,43 +1,47 @@
+import React, { useState } from 'react'
 import './App.css';
-import Item from './components/Item';
 import Avatar from './components/Avatar';
 import useFetch from './hooks/useFetch';
 
 function App() {
 
-  const token = process.env.REACT_APP_APIKEY;
-  // const uri = `https://superheroapi.com/api/${token}/1`
-  const uri = `https://superheroapi.com/api/${token}/78`
+  const [ urlAvatar, setUrlAvatar ] = useState("");
+  const [ name, setName ] = useState("")
 
-  const { loading, data, error } = useFetch(uri);
+  const token = process.env.REACT_APP_APIKEY;
+  const uri = `https://superheroapi.com/api/${token}`
+
+  const { loading, error, data } = useFetch(uri, 32);
+
+  const handleHover = (e) => {
+    console.log(e)
+    setUrlAvatar(e.target.src);
+    setName(e.target.alt)
+  }
 
   if(loading) return <p>Loading...</p>
-  if(error) return <p>Error</p>
 
-  const { image, name } = data;
+  console.log(data)
 
   return (
     <div className="container">
         <div className="element-container">
+        
+
             <div className="grid-items">
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
-                <Item img={ image.url } />
+              {
+                data.map((e) => {
+                  return(
+                    <div className="item"  >  
+                      <img alt={ e.name }  onMouseEnter={handleHover} src={ e.image.url } />
+                    </div>
+                  )
+                })
+              }
             </div>
             <div className="avatar-container">
-                <Avatar img={ image.url } name={ name } />
-            </div>
+                <Avatar img={ urlAvatar } name={ name } />
+            </div> 
         </div>
     </div>
   );

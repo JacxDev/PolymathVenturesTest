@@ -27,3 +27,15 @@
   grid-template-rows: repeat(auto-fill, minmax(80px, 100px));
   gap: 20px;
 }
+
+.item{
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.item img{
+  width: 100px;
+  height: 100px;
+  border-radius: 9px;
+}
