@@ -1,17 +1,38 @@
 .character-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
 }
 
 .container-characterInfo{
+    display: grid;
     background-color: black;
     height: 100vh;
+    justify-content: center;
+}
+
+.character-img img{
+    border-radius: 16px;
 }
 
 .character-text h4{
     color: white;
 }
 
+.character-text h3{
+    margin-top: 15px;
+    color: white;
+}
+
 .character-text h2{
     color: white;
 }
+
+.character-text button{
+    background-color: teal;
+    border: none;
+    border-radius: 9px;
+    height: 36px;
+}
+
