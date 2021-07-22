@@ -17,9 +17,12 @@ const Main = () => {
         setName(e.target.alt);
         e.target.className = "item-selected"
          
-        const parentElement = e.target.parentElement.parentElement;
         const removeElement = e.target.parentElement.parentElement.firstChild;
-        parentElement.removeChild(removeElement)
+        if(removeElement.tagName == "P"){
+            removeElement.remove()
+        }
+        
+        
 
     }
     const handleClick = (e) => {    
