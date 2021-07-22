@@ -8,33 +8,27 @@ const Main = () => {
     const [ name, setName ] = useState("");
 
     const token = process.env.REACT_APP_APIKEY;
-    const uri = `https://superheroapi.com/api/${token}`
+    const uri = `https://superheroapi.com/api/${token}`;
 
     const { loading, data } = useFetch(uri, 10);
 
     const handleHover = (e) => {
         setUrlAvatar(e.target.src);
         setName(e.target.alt);
-        e.target.className = "item-selected"
+        e.target.className = "item-selected";
          
         const removeElement = e.target.parentElement.parentElement.firstChild;
         if(removeElement.tagName == "P"){
-            removeElement.remove()
+            removeElement.remove();
         }
-        
-        
-
     }
-    const handleClick = (e) => {    
-        e.preventDefault();
-        console.log(e)
-    }
-
-    //Implementar local storage para mejorar performace
-    // useEffect(() => {
-    //     localStorage.setItem('data', JSON.stringify(data))
-    // }, [data])
-    // const dataStorege = JSON.parse(localStorage.getItem('data'));
+    //1.- Implementar local storage para mejorar performace
+    //2.- Vista Home Disenio responsive
+    //3.- Agregar personajes secretos 70%
+    //4.- Vista Character responsive
+    //5.- Implementar hoykeys en Vista home
+    //6.- Crear Readme
+    //7.- Deployar
 
     if(loading) return <p>Loading...</p>
 
@@ -45,7 +39,7 @@ const Main = () => {
                 {
                     data.map((e) => {
                     return(
-                        <div key={e.id} className="item"  onClick={ handleClick } >  
+                        <div key={e.id} className="item" >  
                             <p className="new-label">New</p>
                             <Link to={{
                                 pathname: "/character",

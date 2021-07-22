@@ -16,3 +16,9 @@
     height: auto;
     max-height: 50rem;
 }
+
+@media only screen and (max-width: 600px){
+    .avatar >img{
+        max-height: 25rem;
+    }
+}
