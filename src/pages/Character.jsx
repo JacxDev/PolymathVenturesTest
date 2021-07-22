@@ -15,7 +15,7 @@ const Character = () => {
             <div className="character-info">
                 <div className="character-text">
                     <h2>INFO</h2>
-                    <h4> { name } </h4>
+                    <h4> { `Name: ${ name }` } </h4>
                     <h4> { `Gender:  ${gender}`} </h4>
                     <h4> { `Race: ${ race }` } </h4>
                     <h2>Stats</h2>

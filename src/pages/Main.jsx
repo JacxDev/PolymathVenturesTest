@@ -23,8 +23,8 @@ const Main = () => {
         }
     }
     //1.- Implementar local storage para mejorar performace
-    //2.- Vista Home Disenio responsive
-    //3.- Agregar personajes secretos 70%
+    //2.- Vista Home Disenio responsive  OK
+    //3.- Agregar personajes secretos 70% 
     //4.- Vista Character responsive
     //5.- Implementar hoykeys en Vista home
     //6.- Crear Readme
