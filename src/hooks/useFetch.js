@@ -27,7 +27,7 @@ const useFetch = ( url, items ) => {
         
 
         fetchData();
-    }, [])
+    }, [url])
 
 
     return {

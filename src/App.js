@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.css';
 import Main from './pages/Main';
 import Character from './pages/Character';
@@ -6,9 +6,6 @@ import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
-	Link,
-	useRouteMatch,
-	useParams
   } from "react-router-dom";
 
 function App() {

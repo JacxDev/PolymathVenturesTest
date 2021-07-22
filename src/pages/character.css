@@ -1,0 +1,17 @@
+.character-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container-characterInfo{
+    background-color: black;
+    height: 100vh;
+}
+
+.character-text h4{
+    color: white;
+}
+
+.character-text h2{
+    color: white;
+}

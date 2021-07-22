@@ -41,10 +41,27 @@
   opacity: 50%;
 }
 
+.item-selected{
+  opacity: 100% !important;
+}
+
 .item-select img{
   width: 100px;
   height: 100px;
   border-radius: 9px;
   opacity: 100%;
+}
+
+.new-label{
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 80px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.remove-new-label{
+  display: none;
 }
 
